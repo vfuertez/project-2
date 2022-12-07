@@ -7,9 +7,9 @@ const listSchema = new Schema({
     name: {type: String, required: true},
     language: String,
     url: String,
-    Notes: String,
     creator: String,
-
+    note: String,
+    
 })
 
 // model
