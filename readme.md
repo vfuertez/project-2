@@ -14,8 +14,8 @@ Creates a name of the guide or tutorial that you plan to save and add details of
 # Wireframe 
 
 
-[](https://imgur.com/a/rVYfsFL)
-[](https://imgur.com/a/9hVVt2j)
+![](https://imgur.com/a/rVYfsFL)
+![](https://imgur.com/a/9hVVt2j)
 
 | Day | Goal |
 |-----|------|
