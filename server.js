@@ -15,7 +15,7 @@ const ListRouter = require('./controllers/list')
 
 //Routes
 app.get("/", (req, res) => {
-    res.send('Server is working')
+    res.redirect('/list')
 })
 
 app.use('/list', ListRouter)

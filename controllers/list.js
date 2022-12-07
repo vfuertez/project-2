@@ -1,5 +1,6 @@
 const { application } = require('express')
 const express = require('express')
+const { findById } = require('../models/list')
 const List = require('../models/list')
 
 // ROuter
@@ -46,7 +47,10 @@ router.get('/', (req, res) => {
 
 
 // Show Route
-
+router.get('/:id', async (req, res) =>{
+    const list = await List.findById(req.params.id)
+    res.render('list/show.ejs', {list})
+})
 
 // seed route
 router.get('/seed', async (req, res) => {
