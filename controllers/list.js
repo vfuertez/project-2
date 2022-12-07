@@ -1,3 +1,4 @@
+const { application } = require('express')
 const express = require('express')
 const List = require('../models/list')
 
@@ -9,7 +10,43 @@ function errorHandler(error, res) {
     res.json(error)
 }
 
-// Routes
+// Index Route
+router.get('/', (req, res) => {
+    List.find({})
+    .then((lists) => {
+        // res.json(lists)
+        res.render('list/index.ejs', {lists})
+    })
+    .catch(err => console.log(err))
+} )
+
+
+// New Route
+
+
+
+// Destroy Route 
+
+
+
+// Update Route 
+
+
+
+// Create Route 
+
+
+
+// Create ROute
+
+
+
+// Edit ROute
+
+
+
+// Show Route
+
 
 // seed route
 router.get('/seed', async (req, res) => {
