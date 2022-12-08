@@ -44,13 +44,20 @@ router.delete("/:id", (req, res) => {
 })
 
 
-// Update Route 
-
-
-
-
-
 // Edit ROute
+router.get('/:id/edit', (req, res) => {
+    List.findById(req.params.id, (err, list) => {
+        res.render('list/edit.ejs', {list})
+    })
+})
+
+
+// Update Route 
+router.put('/:id', (req, res) => {
+    List.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updateList) => {
+        res.redirect(`/list/${req.params.id}`)
+    })
+})
 
 
 
