@@ -37,18 +37,16 @@ router.post('/', (req, res) => {
 
 
 // Destroy Route 
-
+router.delete("/:id", (req, res) => {
+    List.findByIdAndRemove(req.params.id, (err, animal) => {
+        res.redirect('/list')
+    })
+})
 
 
 // Update Route 
 
 
-
- 
-
-
-
-// Create ROute
 
 
 

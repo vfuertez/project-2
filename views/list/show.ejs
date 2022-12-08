@@ -16,8 +16,16 @@
     <h3> Creator: <%=list.creator %></h3>
     
     <h3>Notes: <%=list.note %></h3>
+
+
+    <form action="/list/<%= list._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete">
+    </form>
     
     <a href="/list"> <h4>Back</h4></a>
+
+
+
     
     <a href=" https://youtu.be/dQw4w9WgXcQ"><iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
 
