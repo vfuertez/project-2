@@ -23,7 +23,17 @@ router.get('/', (req, res) => {
 
 
 // New Route
+router.get('/new', (req ,res) => {
+    res.render('list/new.ejs')
+})
 
+// Create Route
+router.post('/', (req, res) => {
+    List.create(req.body, (err, theList) => {
+        console.log(theList)
+        res.redirect('/list')
+    })
+})
 
 
 // Destroy Route 
@@ -34,7 +44,7 @@ router.get('/', (req, res) => {
 
 
 
-// Create Route 
+ 
 
 
 

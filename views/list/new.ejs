@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New</title>
+</head>
+<body>
+    
+    <form action="/list" method="POST">
+        <div>
+          <label for="newList"> Name:  </label>
+        <input type="text" id="newList" name="name"> 
+      </div>
+      
+      <br>
+      
+      <div>
+        <label for="newUrl"> Url:  </label>
+        <input type="text" id="newUrl" name="url" />
+        </div>
+      
+        <br>
+        <div>
+        <label for="newCreator"> Creator  </label>
+        <input type="text" id="newCreator" name="creator"/>
+        </div>
+      
+      <br>
+      
+      <div>
+        <label for="newNote"> Notes:  </label>
+        <input type="text" id="newNote" name="note" />
+      </div>
+      
+      <br><br>
+      
+      <div>
+        <input type="reset">
+        <input type="submit" value="Add" />
+      </div>
+      </form>
+
+      <a href="/list"> <h4>Back To Main Page</h4></a>
+</body>
+</html>

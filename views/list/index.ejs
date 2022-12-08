@@ -9,6 +9,8 @@
 <body>
     <h1> GuideList Links and Notes</h1>
     
+    <a href="/list/new"><button>Add</button></a>
+
 <% lists.forEach((list, index) => { %>
 <a href="/list/<%=list._id%>"><h2><%=list.name%></h2></a>
 <% }) %>
