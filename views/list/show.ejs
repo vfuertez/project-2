@@ -4,31 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
     <title>Show</title>
 </head>
 <body>
     
-
+<div class="showPage">
     <h1><%= list.name %></h1>
+
+    <br>
 
     <h2>URL: <a href="<%= list.url %>" target="_blank" rel="noopener noreferrer" ">  <%= list.url %> </a> </h2>
     
+<br>
+
     <h3> Creator: <%=list.creator %></h3>
+
+    <br>
     
     <h3>Notes: <%=list.note %></h3>
 
-    <a href="/list/<%= list._id %>/edit"><button> Edit</button></a>
+    <br>
+
+    <a href="/list/<%= list._id %>/edit"><button> Edit</button></a> 
+    
+    <br><br>
 
     <form action="/list/<%= list._id %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete">
-    </form>
+    </form> <br>
     
     <a href="/list"> <h4>Back</h4></a>
 
-
-
-    
-    <a href=" https://youtu.be/dQw4w9WgXcQ"><iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+</div>
 
 </body>
 </html>

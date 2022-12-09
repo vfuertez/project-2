@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+
     <title>Project 2</title>
 </head>
 <body>
-    <h1>Links and Notes</h1>
-    
-    <a href="/list/new"><button>Add</button></a>
 
+    <header class="index-header">
+    <h1 class="appName">Links and Notes</h1>
+    </header>
+
+    <div id="add-button">
+    <a href="/list/new" ><button>Add</button></a>
+</div>
+
+
+    <div class="indexPage">
+ 
 <% lists.forEach((list, index) => { %>
-<a href="/list/<%=list._id%>"><h2><%=list.name%></h2></a>
+<a href="/list/<%=list._id%>"><h2><%=list.name%></h2><br></a>
 <% }) %>
+</div>
+
 
 </body>
 </html>
