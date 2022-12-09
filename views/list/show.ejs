@@ -22,13 +22,13 @@
 
     <br>
     
-    <h3>Notes: <%=list.note %></h3>
+    <textarea id="show-textarea" rows="7" cols="55"> <%=list.note %> </textarea>
 
     <br>
 
     <a href="/list/<%= list._id %>/edit"><button> Edit</button></a> 
     
-    <br><br>
+    <br> <br>
 
     <form action="/list/<%= list._id %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete">

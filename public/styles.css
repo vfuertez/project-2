@@ -54,7 +54,7 @@ main {
 
 .textBox{
     position: relative;
-    width: 350px;
+    width: 410px;
 }
 
 .textBox input {
@@ -96,9 +96,6 @@ font-size: .60em;
 text-align: center;
 }
 
-#newNote {
-    height:100px
-}
 
 body {
     background: url(https://img.freepik.com/premium-vector/gray-silver-wave-abstract-background_29865-1260.jpg?w=1380);
@@ -107,4 +104,16 @@ body {
 
 #newReturn {
     text-align: center;
+}
+
+#show-textarea {
+    font-size: 1em;
+    padding: 7px;
+    font-weight:700
+}
+
+#newNote {
+    font-size: 1em;
+    height: 200px;
+    padding: 7px;
 }
