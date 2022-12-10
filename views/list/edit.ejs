@@ -8,21 +8,21 @@
     <form action="/list/<%= list._id %>?_method=PUT" method="POST">
 
         <div class="textBox">
-        <input type="text" id="newList" name="name" value="<%= list.name %>"> 
+        <input type="text" id="newList" name="name" value="<%= list.name %>" autocomplete="off"> 
         <span>Name</span>
       </div>
       
       <br>
       
       <div class="textBox">
-        <input type="text" id="newUrl" name="url" value="<%=list.url %>"/>
+        <input type="text" id="newUrl" name="url" value="<%=list.url %>" autocomplete="off"/>
         <span>URL</span>
         </div>
       
         <br>
 
         <div class="textBox">
-        <input type="text" id="newCreator" name="creator" value="<%= list.creator %>"/>
+        <input type="text" id="newCreator" name="creator" value="<%= list.creator %>" autocomplete="off"/>
         <span>Creator</span>
         </div>
       
