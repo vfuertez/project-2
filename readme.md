@@ -1,9 +1,6 @@
-App Name
-# Bookmark and Notes
+# App Name
 
-
-
-# GuideList Links & Notes
+Bookmark & Notes
 
 Creates a name of the guide or tutorial that you plan to save and add details of what coding language, url, creator, examples, and notes. It can be really anything, not just for coding.
 
@@ -15,6 +12,8 @@ Creates a name of the guide or tutorial that you plan to save and add details of
 * Javascript
 * CSS 
 * Node
+* MongoDB
+* Render
 
 # Wireframe 
 
