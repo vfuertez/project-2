@@ -1,63 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-    <title>New</title>
-</head>
+
+  <%- include('../partials/head.ejs') %>
+
 <body>
     
   <main>
     
-    
     <form action="/list" method="POST">
 
         <div class="textBox">
-        <input type="text" id="newList" name="name" placeholder=" "> 
+        <input type="text" id="newList" name="name" placeholder=" " autocomplete="off"> 
           <span>Name</span>
       </div>
       
       <br>
       
       <div class="textBox">
-        
-        <input type="text" id="newUrl" name="url" placeholder=" "/>
+        <input type="text" id="newUrl" name="url" placeholder=" " autocomplete="off"/>
         <span>URL</span>
         </div>
       
         <br>
 
         <div class="textBox">
-        
-        <input type="text" id="newCreator" name="creator" placeholder=" "/>
+        <input type="text" id="newCreator" name="creator" placeholder=" " autocomplete="off"/>
         <span>Creator</span>
         </div>
       
       <br>
       
       <div class="textBox" id="noteBox">
-       
         <textarea id="newNote" name="note" placeholder="  Notes" rows="4" cols="41"></textarea>
-       
       </div>
 
       <br>
-
-
-    
 
       <div id="resetAdd">
         <input type="reset">
         <input type="submit" value="Add" />
       </div>
 
-       
-
       <br>
       
       <a href="/list" id="newReturn"> <h3>Return</h3></a>
+
       </form>
      </main>
 </body>

@@ -1,104 +1,99 @@
-const { application } = require('express')
-const express = require('express')
-const { findById } = require('../models/list')
-const List = require('../models/list')
+const express = require("express");
+const List = require("../models/list");
 
-// ROuter
-const router = express.Router()
+// Router
+const router = express.Router();
 
-// error handler
+// Error Handler
 function errorHandler(error, res) {
-    res.json(error)
+  res.json(error);
 }
 
 // Index Route
-router.get('/', (req, res) => {
-    List.find({})
+router.get("/", (req, res) => {
+  List.find({})
     .then((lists) => {
-        // res.json(lists)
-        res.render('list/index.ejs', {lists})
+      // res.json(lists)
+      res.render("list/index.ejs", { lists });
     })
-    .catch(err => console.log(err))
-} )
-
+    .catch((err) => console.log(err));
+});
 
 // New Route
-router.get('/new', (req ,res) => {
-    res.render('list/new.ejs')
-})
+router.get("/new", (req, res) => {
+  res.render("list/new.ejs");
+});
 
 // Create Route
-router.post('/', (req, res) => {
-    List.create(req.body, (err, theList) => {
-        console.log(theList)
-        res.redirect('/list')
-    })
-})
+router.post("/", (req, res) => {
+  List.create(req.body, (err, theList) => {
+    //console.log(theList);
+    res.redirect("/list");
+  });
+});
 
-
-// Destroy Route 
+// Destroy Route
 router.delete("/:id", (req, res) => {
-    List.findByIdAndRemove(req.params.id, (err, animal) => {
-        res.redirect('/list')
-    })
-})
-
+  List.findByIdAndRemove(req.params.id, (err, animal) => {
+    res.redirect("/list");
+  });
+});
 
 // Edit ROute
-router.get('/:id/edit', (req, res) => {
-    List.findById(req.params.id, (err, list) => {
-        res.render('list/edit.ejs', {list})
-    })
-})
+router.get("/:id/edit", (req, res) => {
+  List.findById(req.params.id, (err, list) => {
+    res.render("list/edit.ejs", { list });
+  });
+});
 
-
-// Update Route 
-router.put('/:id', (req, res) => {
-    List.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updateList) => {
-        res.redirect(`/list/${req.params.id}`)
-    })
-})
-
-
+// Update Route
+router.put("/:id", (req, res) => {
+  List.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updateList) => {
+      res.redirect(`/list/${req.params.id}`);
+    }
+  );
+});
 
 // Show Route
-router.get('/:id', async (req, res) =>{
-    const list = await List.findById(req.params.id)
-    res.render('list/show.ejs', {list})
-})
+router.get("/:id", async (req, res) => {
+  const list = await List.findById(req.params.id);
+  res.render("list/show.ejs", { list });
+});
 
-// seed route
-router.get('/seed', async (req, res) => {
-    await List.remove({}).catch((error) => errorHandler(error,res))
-    const lists = await List.create([
-        {
-            name: "Input Types Tutorial",
-            url: "https://youtu.be/oPXy55dEIiM",
-            creator: "codecourse",
-            note: "coding tutorial"
-        },
-        {
-            name: "Express Mongoose Guide",
-            url: "https://www.youtube.com/@AlexMercedCoder",
-            creator: "Alex",
-            note: "coding tutorial"
-        },
-        {
-            name: "Making souffle pancakes",
-            url: "https://youtu.be/tBTNMo77h2Q",
-            creator: "Qiong Cooking",
-            note: "Ingredients: 2pcs egg, 20ml(4tsp) Milk, (30g) All purpose flour, (1/4 tsp) vanilla extract(optional), (2tbsp) Sugar "
-        },
-        {
-            name: "Music tutorial",
-            url: "https://youtu.be/dQw4w9WgXcQ",
-            creator: "Rick",
-            note: "!"
-        },
-        
-    ]).catch((error) => errorHandler(error, res))
-    res.json(lists)
-})
+// Seed Route
+router.get("/seed", async (req, res) => {
+  await List.remove({}).catch((error) => errorHandler(error, res));
+  const lists = await List.create([
+    {
+      name: "Input Types Tutorial",
+      url: "https://youtu.be/oPXy55dEIiM",
+      creator: "codecourse",
+      note: "coding tutorial",
+    },
+    {
+      name: "Express Mongoose Guide",
+      url: "https://www.youtube.com/@AlexMercedCoder",
+      creator: "Alex",
+      note: "coding tutorial",
+    },
+    {
+      name: "Making souffle pancakes",
+      url: "https://youtu.be/tBTNMo77h2Q",
+      creator: "Qiong Cooking",
+      note: "Ingredients: 2pcs egg, 20ml(4tsp) Milk, (30g) All purpose flour, (1/4 tsp) vanilla extract(optional), (2tbsp) Sugar ",
+    },
+    {
+      name: "Music tutorial",
+      url: "https://youtu.be/dQw4w9WgXcQ",
+      creator: "Rick",
+      note: "!",
+    },
+  ]).catch((error) => errorHandler(error, res));
+  res.json(lists);
+});
 
-
-module.exports = router
+module.exports = router;

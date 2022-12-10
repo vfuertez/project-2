@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-    <title>Update</title>
-</head>
+  <%- include('../partials/head.ejs') %>
+
 <body>
     
   <main>
@@ -32,20 +27,18 @@
         </div>
       
       <br>
-      
-      
-
+         
   <div class="textBox">
     <textarea id="newNote" name="note"  rows="4" cols="41"><%= list.note %></textarea>
   </div>
-
-      
+    
       <br><br>
       
       <div class="editButton">
-        <input type="submit" value="Update" /><br><br>
+        <input type="submit" value="Update" id="edit-button2" /><br><br>
 
         <a href="/list"> <h3> Return</h3></a>
+        
       </div>
       </form>
     </main>

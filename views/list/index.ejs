@@ -1,31 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+  <%- include('../partials/head.ejs') %>
 
-    <title>Project 2</title>
-</head>
-<body>
-
-    <header class="index-header">
-    <h1 class="appName">Links and Notes</h1>
-    </header>
+  <body>
+    <%- include('../partials/header.ejs') %>
 
     <div id="add-button">
-    <a href="/list/new" ><button>Add</button></a>
-</div>
-
+      <a href="/list/new" id="index-add"><button>Add</button></a>
+    </div>
 
     <div class="indexPage">
- 
-<% lists.forEach((list, index) => { %>
-<a href="/list/<%=list._id%>"><h2><%=list.name%></h2><br></a>
-<% }) %>
-</div>
-
-
-</body>
+      <% lists.forEach((list, index) => { %>
+      <a href="/list/<%=list._id%>"><h2><%=list.name%></h2><br></a>    
+      <% }) %>
+    </div>
+  </body>
 </html>

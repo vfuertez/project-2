@@ -1,30 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-    <title>Show</title>
-</head>
+    <%- include('../partials/head.ejs') %>
 <body>
     
 <div class="showPage">
-    <h1><%= list.name %></h1>
+    <h1><%= list.name %></h1><br>
 
-    <br>
+<div id="url-show">
+    <h2>URL: <a href="<%= list.url %>" target="_blank" rel="noopener noreferrer" ">  <%= list.url %> </a> </h2> <br>
+    </div>
 
-    <h2>URL: <a href="<%= list.url %>" target="_blank" rel="noopener noreferrer" ">  <%= list.url %> </a> </h2>
+    <h3> Creator: <%=list.creator %></h3> <br>
     
-<br>
-
-    <h3> Creator: <%=list.creator %></h3>
-
-    <br>
-    
-    <textarea id="show-textarea" rows="7" cols="55"> <%=list.note %> </textarea>
-
-    <br>
+    <textarea id="show-textarea" rows="7" cols="55"> <%=list.note %> </textarea> <br>
 
     <a href="/list/<%= list._id %>/edit"><button> Edit</button></a> 
     
