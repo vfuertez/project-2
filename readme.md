@@ -2,7 +2,7 @@
 
 Bookmarks & Notes
 
-Creates a name of the guide, tutorial or any websites that you plan to save and add details of url, creator, examples, and notes.
+Creates a name of a guide, tutorial or any websites that you plan to save and add details of url, creator, examples, and notes.
 
 # Technologies Used
 
@@ -40,3 +40,6 @@ Creates a name of the guide, tutorial or any websites that you plan to save and 
 
 # App Url
 [Bookmarks & Notes](https://project-2-abes.onrender.com)
+
+# Github
+[Github](https://github.com/vfuertez/project-2)
