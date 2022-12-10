@@ -32,7 +32,7 @@ router.post("/", (req, res) => {
   });
 });
 
-// Destroy Route
+// Delete Route
 router.delete("/:id", (req, res) => {
   List.findByIdAndRemove(req.params.id, (err, animal) => {
     res.redirect("/list");
