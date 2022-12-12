@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <%- include('../partials/head.ejs') %>
+<%- include('../partials/head.ejs') %>
 
-<body>
-    
-  <main>
-    
-    <form action="/list" method="POST">
+  <body>
+
+    <div class="new-page">
+      <form action="/list" method="POST">
 
         <div class="textBox">
-        <input type="text" id="newList" name="name" placeholder=" " autocomplete="off"> 
+          <input type="text" id="newList" name="name" placeholder=" " autocomplete="off">
           <span>Name</span>
-      </div>
-      
-      <br>
-      
-      <div class="textBox">
-        <input type="text" id="newUrl" name="url" placeholder=" " autocomplete="off"/>
-        <span>URL</span>
         </div>
-      
+
         <br>
 
         <div class="textBox">
-        <input type="text" id="newCreator" name="creator" placeholder=" " autocomplete="off"/>
-        <span>Creator</span>
+          <input type="url" id="newUrl" name="url" placeholder=" " autocomplete="off" />
+          <span>URL</span>
         </div>
-      
-      <br>
-      
-      <div class="textBox" id="noteBox">
-        <textarea id="newNote" name="note" placeholder="  Notes" rows="4" cols="41"></textarea>
-      </div>
 
-      <br>
+        <br>
 
-      <div id="resetAdd">
-        <input type="reset">
-        <input type="submit" value="Add" />
-      </div>
+        <div class="textBox">
+          <input type="text" id="newCreator" name="creator" placeholder=" " autocomplete="off" />
+          <span>Creator</span>
+        </div>
 
-      <br>
-      
-      <a href="/list" id="newReturn"> <h3>Return</h3></a>
+        <br>
+
+        <div class="textBox" id="noteBox">
+          <textarea id="newNote" name="note" placeholder="  Notes" rows="4" cols="38"></textarea>
+        </div>
+
+
+        <div class="new-container">
+          <input type="submit" value="Add" class="edit-delete-add" />
+        </div>
+
+        <br>
+
+        <a href="/list" id="newReturn">
+          <h3>Back</h3>
+        </a>
 
       </form>
-     </main>
-</body>
+    </div>
+
+
+  </body>
+
 </html>

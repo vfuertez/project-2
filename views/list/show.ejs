@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head.ejs') %>
-<body>
-    
-<div class="showPage">
-    <h1><%= list.name %></h1><br>
+<%- include('../partials/head.ejs') %>
 
-<div id="url-show">
-    <h2>URL: <a href="<%= list.url %>" target="_blank" rel="noopener noreferrer" ">  <%= list.url %> </a> </h2> <br>
+    <body>
+
+        <div class="showPage">
+            <h1>
+                <%= list.name %>
+            </h1><br>
+
+            <div id="url-show">
+                <h2>URL: <a href="<%= list.url %>" target="_blank" rel="noopener noreferrer" ">  <%= list.url %> </a> </h2> <br>
     </div>
 
     <h3> Creator: <%=list.creator %></h3> <br>
     
-    <textarea id="show-textarea" rows="7" cols="55"> <%=list.note %> </textarea> <br>
+    <textarea class=" show-textarea" rows="10" cols="60" readonly>
+                        <%=list.note %> </textarea> <br>
 
-    <a href="/list/<%= list._id %>/edit"><button> Edit</button></a> 
-    
-    <br> <br>
+                            <div class="show-button">
 
-    <form action="/list/<%= list._id %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete">
-    </form> <br>
-    
-    <a href="/list"> <h4>Back</h4></a>
+                                <a href="/list/<%= list._id %>/edit"><button class="edit-delete-add"> Edit</button></a>
 
-</div>
+                                <form action="/list/<%= list._id %>?_method=DELETE" method="POST">
+                                    <input type="submit" value="Delete" class="edit-delete-add">
+                                </form>
+                            </div>
+                            <br>
 
-</body>
+                            <a href="/list">
+                                <h3>Back</h3>
+                            </a>
+
+            </div>
+
+    </body>
+
 </html>

@@ -1,8 +1,8 @@
 # App Name
 
-Bookmarks & Notes
+Bookmarker
 
-Creates a name of a guide, tutorial or any websites that you plan to save and add details of url, creator, examples, and notes.
+Creates a name of a guide, tutorial or any websites that you plan to save and add details of url, creator, and notes.
 
 # Technologies Used
 
@@ -34,12 +34,12 @@ Creates a name of a guide, tutorial or any websites that you plan to save and ad
 
 # App Screenshots
 
-![](https://i.imgur.com/ZOGpYtb.png)
-![](https://i.imgur.com/Egtqrl9.png)
-![](https://i.imgur.com/pQRzRCn.png)
+![](https://i.imgur.com/AszT9SB.png)
+![](https://i.imgur.com/HnbWn6B.png)
+![](https://i.imgur.com/aZjcWiv.png)
 
 # App Url
-[Bookmarks & Notes](https://project-2-abes.onrender.com)
+[Bookmarker](https://project-2-abes.onrender.com)
 
 # Github
 [Github](https://github.com/vfuertez/project-2)

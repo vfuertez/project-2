@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head.ejs') %>
+<%- include('../partials/head.ejs') %>
 
-<body>
-    
-  <main>
-    <form action="/list/<%= list._id %>?_method=PUT" method="POST">
+  <body>
+
+    <div class="editPage">
+
+      <form action="/list/<%= list._id %>?_method=PUT" method="POST">
 
         <div class="textBox">
-        <input type="text" id="newList" name="name" value="<%= list.name %>" autocomplete="off"> 
-        <span>Name</span>
-      </div>
-      
-      <br>
-      
-      <div class="textBox">
-        <input type="text" id="newUrl" name="url" value="<%=list.url %>" autocomplete="off"/>
-        <span>URL</span>
+          <input type="text" id="newList" name="name" value="<%= list.name %>" autocomplete="off">
+          <span>Name</span>
         </div>
-      
+
         <br>
 
         <div class="textBox">
-        <input type="text" id="newCreator" name="creator" value="<%= list.creator %>" autocomplete="off"/>
-        <span>Creator</span>
+          <input type="url" id="newUrl" name="url" value="<%=list.url %>" autocomplete="off" />
+          <span>URL</span>
         </div>
-      
-      <br>
-         
-  <div class="textBox">
-    <textarea id="newNote" name="note"  rows="4" cols="41"><%= list.note %></textarea>
-  </div>
-    
-      <br><br>
-      
-      <div class="editButton">
-        <input type="submit" value="Update" id="edit-button2" /><br><br>
 
-        <a href="/list"> <h3> Return</h3></a>
-        
-      </div>
+        <br>
+
+        <div class="textBox">
+          <input type="text" id="newCreator" name="creator" value="<%= list.creator %>" autocomplete="off" />
+          <span>Creator</span>
+        </div>
+
+        <br>
+
+        <div class="textBox">
+          <textarea id="newNote" name="note" rows="4" cols="38"><%= list.note %></textarea>
+        </div>
+
+        <br><br>
+
+        <div class="editButton">
+          <input type="submit" value="Update" class="edit-delete-add" /><br><br>
+
+          <a href="/list">
+            <h3> Return</h3>
+          </a>
+
+        </div>
       </form>
-    </main>
 
-</body>
+    </div>
+
+
+  </body>
+
 </html>

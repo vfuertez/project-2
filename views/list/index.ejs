@@ -3,15 +3,34 @@
   <%- include('../partials/head.ejs') %>
 
   <body>
-    <%- include('../partials/header.ejs') %>
+    <div class="app-name">
+      <h1 class="title">Bookmarker</h1>
 
-    <div id="add-button">
-      <a href="/list/new" id="index-add"><button>Add</button></a>
+      <div class="search-container">
+        <form
+          action="https://www.google.com/search"
+          method="get"
+          class="search-box"
+          target="_blank"
+          rel="noopener noreferrer"
+          autocomplete="off"
+        >
+          <input type="text" placeholder="Google Search" name="q" />
+          <button type="submit">
+            <img src="https://i.imgur.com/XurOVOB.png" />
+          </button>
+        </form>
+      </div>
+      <a href="/list/new"><button id="indexAdd-button">New</button></a>
     </div>
 
     <div class="indexPage">
-      <% lists.forEach((list, index) => { %>
-      <a href="/list/<%=list._id%>"><h2><%=list.name%></h2><br></a>    
+      <% lists.forEach((list, index)=> { %>
+
+      <a href="/list/<%=list._id%>" id="list">
+        <h2><%=list.name%></h2>
+        <br />
+      </a>
       <% }) %>
     </div>
   </body>

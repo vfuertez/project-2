@@ -1,42 +1,141 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,200&family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: Prompt;
 }
 
-header {
-  text-align: center;
+body {
+  background: url(https://img.freepik.com/free-vector/white-background-gradient-modern-abstract-design-wave_343694-2337.jpg?w=1480&t=st=1670811067~exp=1670811667~hmac=c53caacd6ec137dfcb47b032b8de81161b72947f76f739c97329b1a67b2f8a8c);
   background-size: cover;
-  background-color: rgb(192, 187, 187, 0.8);
+}
+
+.app-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: rgba(2, 41, 50, 0.1);
   padding: 30px;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  width: 400px;
+  padding: 10px;
+}
+
+.title {
+  font-family: Indie Flower;
+  font-size: 50px;
+  padding-top: 5px;
+  text-shadow: 3px 5px 2px #677d8c;
+  color: rgb(42, 78, 94);
+}
+
+.search-box {
+  width: 100%;
+  max-width: 400px;
+  background: rgb(248, 244, 244);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 5px 20px;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-box input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 4px 20px;
+  font-size: 18px;
+  color: rgb(14, 10, 5);
+}
+
+.search-box button img {
+  width: 25px;
+}
+
+.search-box button {
+  border: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: rgb(172, 202, 202);
+  cursor: pointer;
+}
+
+#indexAdd-button {
+  background-color: rgb(172, 202, 202);
+  width: 90px;
+  border-radius: 5px;
+  height: 60px;
+  font-size: 18px;
+  border: 2px solid black;
+  box-shadow: 5px 5px gray;
 }
 
 .indexPage {
-  padding: 20px;
-  margin: 0 auto;
-  text-align: center;
-  max-width: 600px;
-  border: 5px solid white;
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 30px;
+  justify-content: center;
+  margin: 100px;
 }
 
 .showPage {
-  font-size: 20px;
-  margin: auto;
   text-align: center;
-  padding-top: 50px;
-  max-width: 600px;
+  margin: 20px;
 }
 
-main {
+.editPage {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  margin-top: 80px;
+}
+
+#url-show {
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.show-button {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.edit-delete-add {
+  width: 70px;
+  padding: 2px;
+  background-color: rgb(172, 202, 202);
+  font-size: 15px;
+  box-shadow: 2px 2px rgb(136, 137, 137);
+  border-radius: 5px;
+}
+
+.new-container {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.new-page {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
   gap: 30px;
-  background: rgb(192, 187, 187);
+  background: url(https://img.freepik.com/free-vector/white-background-gradient-modern-abstract-design-wave_343694-2337.jpg?w=1480&t=st=1670811067~exp=1670811667~hmac=c53caacd6ec137dfcb47b032b8de81161b72947f76f739c97329b1a67b2f8a8c);
   padding-bottom: 100px;
 }
 
@@ -48,7 +147,7 @@ main {
 .textBox input {
   width: 100%;
   padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(2, 12, 19, 0.9);
   background: whitesmoke;
   border-radius: 5px;
   outline: none;
@@ -74,54 +173,56 @@ main {
   font-size: 0.6em;
 }
 
-#resetAdd {
-  text-align: center;
-}
-
 .editButton {
   text-align: center;
-}
-
-body {
-  background: url(https://img.freepik.com/premium-vector/gray-silver-wave-abstract-background_29865-1260.jpg?w=1380);
-  background-size: cover;
 }
 
 #newReturn {
   text-align: center;
 }
 
-#show-textarea {
+.show-textarea {
   font-size: 1em;
   padding: 7px;
   font-weight: 700;
+  border-radius: 3px;
 }
 
 #newNote {
   font-size: 1em;
   height: 200px;
-  padding: 7px;
+  padding: 20px;
+  border-radius: 3px;
 }
 
-#index-add {
-  font-size: 30px;
-}
-#add-button {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
-  margin: 0 auto;
+a:hover {
+  color: #43a402;
 }
 
-#url-show {
-  overflow: hidden;
+a {
+  color: rgb(14, 30, 25);
 }
 
-@media all and (max-width: 500px) {
-  .showPage {
-    font-size: 10px;
+textarea {
+  outline: none;
+  max-width: 100%;
+}
+
+button:hover {
+  color: #ff7a59;
+}
+
+input[type="submit"]:hover {
+  color: #fd8d04;
+}
+
+@media (max-width: 500px) {
+  #indexAdd-button {
+    height: 45px;
   }
-  #show-textarea {
-    font-size: 1em;
+
+  .textBox {
+    width: 380px;
   }
+  
 }
