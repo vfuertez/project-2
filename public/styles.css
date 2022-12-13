@@ -29,11 +29,12 @@ body {
 }
 
 .title {
-  font-family: Indie Flower;
+  font-family:fantasy;
   font-size: 50px;
   padding-top: 5px;
-  text-shadow: 3px 5px 2px #677d8c;
-  color: rgb(42, 78, 94);
+  text-shadow: 3px 5px 2px #0a0d0f;
+  color: rgb(255, 153, 0);
+  font-style: oblique;
 }
 
 .search-box {
